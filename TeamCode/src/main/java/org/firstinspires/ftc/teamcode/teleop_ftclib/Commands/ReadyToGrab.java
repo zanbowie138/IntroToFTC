@@ -1,23 +1,22 @@
-package org.firstinspires.ftc.teamcode.teleop_base.CommandBased.Commands;
+package org.firstinspires.ftc.teamcode.teleop_ftclib.Commands;
 
 import com.arcrobotics.ftclib.command.CommandBase;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-import org.firstinspires.ftc.teamcode.teleop_base.CommandBased.Subsystems.Arm;
+import org.firstinspires.ftc.teamcode.teleop_ftclib.Subsystems.Arm;
 
-public class ReadyToPlace extends CommandBase {
+public class ReadyToGrab extends CommandBase {
     private Arm arm;
     private ElapsedTime timer = new ElapsedTime();
-    private final double TIME_TO_DEPOSIT = 1;
-
-    public ReadyToPlace(Arm arm) {
+    private final double TIME_TO_READY_TO_GRAB = 1;
+    public ReadyToGrab(Arm arm) {
         this.arm = arm;
         addRequirements(arm);
     }
 
     @Override
     public void initialize() {
-        arm.deposit();
+        arm.idle();
     }
 
     @Override
@@ -32,7 +31,7 @@ public class ReadyToPlace extends CommandBase {
 
     @Override
     public boolean isFinished() {
-        return timer.seconds() > TIME_TO_DEPOSIT;
+        return timer.seconds() > TIME_TO_READY_TO_GRAB;
     }
 
 }

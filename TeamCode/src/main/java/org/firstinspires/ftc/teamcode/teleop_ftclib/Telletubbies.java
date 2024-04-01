@@ -1,12 +1,12 @@
-package org.firstinspires.ftc.teamcode.teleop_base.CommandBased;
+package org.firstinspires.ftc.teamcode.teleop_ftclib;
 
 import com.arcrobotics.ftclib.gamepad.GamepadEx;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.teleop_base.CommandBased.Subsystems.Arm;
-import org.firstinspires.ftc.teamcode.teleop_base.CommandBased.Subsystems.Claw;
-import org.firstinspires.ftc.teamcode.teleop_base.CommandBased.Subsystems.Drive;
+import org.firstinspires.ftc.teamcode.teleop_ftclib.Subsystems.Arm;
+import org.firstinspires.ftc.teamcode.teleop_ftclib.Subsystems.Claw;
+import org.firstinspires.ftc.teamcode.teleop_ftclib.Subsystems.Drive;
 
 @TeleOp(name = "Telletubbies", group = "Command")
 public class Telletubbies extends OpMode {
