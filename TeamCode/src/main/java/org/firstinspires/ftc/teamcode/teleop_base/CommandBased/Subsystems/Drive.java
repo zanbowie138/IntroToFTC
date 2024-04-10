@@ -68,7 +68,11 @@ public class Drive extends SubsystemBase {
     }
 
     public void setDrivePower(double x, double y, double r) {
-        setMotorPower(x, y, r, 1.0);
+        setDrivePower(x, y, r, 1.0);
+    }
+
+    public void setDrivePower () {
+        setDrivePower(driveGamepad.left_stick_x, driveGamepad.left_stick_y, driveGamepad.right_stick_x, 1.0);
     }
 
     @Override

@@ -38,5 +38,10 @@ public class Claw extends SubsystemBase {
         rightServo.setPosition(RIGHT_CLOSE_POSITION);
     }
 
+    public void open(){
+        leftServo.setPosition(LEFT_OPEN_POSITION);
+        rightServo.setPosition(RIGHT_OPEN_POSITION);
+    }
+
 
 }

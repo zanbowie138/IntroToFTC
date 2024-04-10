@@ -2,16 +2,23 @@ package org.firstinspires.ftc.teamcode.teleop_base.CommandBased.Commands;
 
 import com.arcrobotics.ftclib.command.CommandBase;
 
+import org.firstinspires.ftc.teamcode.teleop_base.CommandBased.Subsystems.Arm;
+import org.firstinspires.ftc.teamcode.teleop_base.CommandBased.Subsystems.Claw;
+
 public class Grab extends CommandBase {
+    Arm arm;
+    Claw claw;
 
-
-    public Grab() {
-
+    public Grab(Arm arm, Claw claw) {
+        this.arm = arm;
+        this.claw = claw;
     }
 
     @Override
     public void initialize() {
-
+        arm.grab();
+        // TODO: wait a sec
+        claw.close();
     }
 
     @Override
